@@ -177,5 +177,5 @@ def nombre_para_busqueda(nombre):       #creamos una funcion nueva para transfor
 
 
 #aca el python descubre cual es la funcion principal
-if _name_ == "main":
+if __name__ == "main":
     main()
