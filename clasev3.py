@@ -28,7 +28,7 @@ class Paciente:
 class Sistema:    
     def __init__(self):
         self.__lista_pacientes = [] 
-        
+
     def verificarPaciente(self,cedula):
         for p in self.__lista_pacientes:
             if cedula == p.verCedula():
@@ -36,7 +36,7 @@ class Sistema:
         return None
         
     def ingresarPaciente(self,pac):
-         # Primero verifica que el paciente no exista antes de añadirlo
+        # Primero verifica que el paciente no exista antes de añadirlo
         if self.verificarPaciente(pac.verCedula) == True:
             return None
         else:
@@ -53,41 +53,44 @@ class Sistema:
             
     def verNumeroPacientes(self):
         print("En el sistema hay: " + str(len(self.__lista_pacientes)) + " pacientes") 
-
+    
     # Creamos un metodo dentro de la clase para poder acceder a la lista de pacientes
-        def verLista(self):
-            lista = self.__lista_pacientes
-            return lista
-        
+    def verLista(self):
+        lista = self.__lista_pacientes
+        return lista
+
 def main():
     sis = Sistema() 
-        # lineas usadas para la prueba de la busqueda por nombre
+
+    # lineas usadas para la prueba de la busqueda por nombre
     # pena = Paciente()
-    # pena.asignarNombre("Juan Esteban Pena ")
-    # pena.asignarCedula(1085902252)
-    # pena.asignarGenero("M")
+    # pena.asignarNombre("Juan Esteban Pena ") 
+    # pena.asignarCedula(1085902252) 
+    # pena.asignarGenero("M") 
     # pena.asignarServicio("s")
     # sis.ingresarPaciente(pena)
 
     # pena = Paciente()
-    # pena.asignarNombre("Juan Pena ")
-    # pena.asignarCedula(1085902257)
-    # pena.asignarGenero("M")
+    # pena.asignarNombre("Juan Pena ") 
+    # pena.asignarCedula(1085902257) 
+    # pena.asignarGenero("M") 
     # pena.asignarServicio("s")
     # sis.ingresarPaciente(pena)
-    
+
     # tban = Paciente()
-    # tban.asignarNombre("Esteban Daniel Pena Rojas")
-    # tban.asignarCedula(1085902256)
-    # tban.asignarGenero("M")
+    # tban.asignarNombre("Esteban Daniel Pena Rojas") 
+    # tban.asignarCedula(1085902256) 
+    # tban.asignarGenero("M") 
     # tban.asignarServicio("s")
-    # sis.ingresarPaciente(tban
+    # sis.ingresarPaciente(tban)
+
+    #probemos lo que llevamos programado
     while True:
         #TAREA HACER EL MENU
-        opcion = int(input("\nIngrese \n0 para salir, \n1 para ingresar nuevo paciente, \n2 ver Paciente\n\t--> ")) 
+        opcion = int(input("\nDigite \n0 para salir, \n1 para ingresar nuevo paciente, \n2 para ver un paciente\n\t--> ")) 
         
         if opcion == 1:
-            opcion = int(input("\nDigite \n0 para salir, \n1 para ingresar nuevo paciente, \n2 para ver un paciente\n\t--> "))
+            #ingreso pacientes
             print("A continuacion se solicitaran los datos ...") 
             #1. Se solicitan los datos
             cedula = int(input("Ingrese la cedula: ")) 
@@ -107,16 +110,15 @@ def main():
                     print("Paciente ingresado") 
                 else:
                     print("No ingresado") 
-
-
-
-
-        #ver pacientes 
+        # ver paciente
         elif opcion == 2:
-                        # creamos un bucle para la selección de opciones del sub-menú ver paciente
+
+            # creamos un bucle para la selección de opciones del sub-menú ver paciente
             while True:
-                opcion = int(input("\nSeleccione el tipo de busqueda \n0 Para cancelar busqueda, \n1 Para busqueda por cedula, \n2 Para busqueda por nombre\n\t--> "))
-                    # Busqueda por cedula
+
+                opcion = int(input("\nSeleccione el tipo de busqueda \n0 Para cancelar busqueda, \n1 Para busqueda por cedula, \n2 Para busqueda por nombre\n\t--> ")) 
+
+                # Busqueda por cedula
                 if opcion==1:
                     #1. solicito la cedula que quiero buscar
                     c = int(input("Ingrese la cedula a buscar: ")) 
@@ -177,5 +179,4 @@ def nombre_para_busqueda(nombre):       #creamos una funcion nueva para transfor
 
 
 #aca el python descubre cual es la funcion principal
-if __name__ == "main":
-    main()
+main() 
