@@ -25,6 +25,7 @@ class Paciente:
     def asignarServicio(self,s):
         self.__servicio = s 
         
+        #los get y set son muy útiles para controlar el acceso a los atributos de una clase
 class Sistema:    
     def __init__(self):
         self.__lista_pacientes = [] 
